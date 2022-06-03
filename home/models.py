@@ -13,8 +13,3 @@ class XYz(models.Model):
         null=True,
         blank=True,
     )
-
-
-class Default23(models.Model):
-    "Generated Model"
-    name = models.TextField()

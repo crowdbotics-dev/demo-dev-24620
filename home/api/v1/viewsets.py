@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Default23, XYz
-from .serializers import Default23Serializer, XYzSerializer
+from home.models import XYz
+from .serializers import XYzSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -41,12 +41,3 @@ class XYzViewSet(viewsets.ModelViewSet):
         authentication.TokenAuthentication,
     )
     queryset = XYz.objects.all()
-
-
-class Default23ViewSet(viewsets.ModelViewSet):
-    serializer_class = Default23Serializer
-    authentication_classes = (
-        authentication.SessionAuthentication,
-        authentication.TokenAuthentication,
-    )
-    queryset = Default23.objects.all()
