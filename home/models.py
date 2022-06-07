@@ -13,3 +13,8 @@ class XYz(models.Model):
         null=True,
         blank=True,
     )
+
+
+class Trigj(models.Model):
+    "Generated Model"
+    name = models.TextField()
